@@ -6,11 +6,7 @@ int main(void)
 
     app.create_window(640, 480, "Hello World");
 
-    if (glewInit() != GLEW_OK)
-    {
-        std::cerr << "Error while initializing GLEW" << std::endl;
-        std::exit(-1);
-    }
+    app.glew_init();
 
     std::cout << glGetString(GL_VERSION) << std::endl;
 
