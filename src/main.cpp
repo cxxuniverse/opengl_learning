@@ -8,18 +8,7 @@ int main(void)
 
     glfwMakeContextCurrent(app.window);
 
-    /* Loop until the user closes the window */
-    while (!glfwWindowShouldClose(app.window))
-    {
-        /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        /* Swap front and back buffers */
-        glfwSwapBuffers(app.window);
-
-        /* Poll for and process events */
-        glfwPollEvents();
-    }
+    app.game_loop();
 
     glfwTerminate();
     return 0;

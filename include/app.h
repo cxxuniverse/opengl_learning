@@ -11,4 +11,6 @@ struct App
     App();
 
     void create_window(int width, int height, const char *title);
+
+    void game_loop();
 };
