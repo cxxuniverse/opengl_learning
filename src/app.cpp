@@ -15,6 +15,7 @@ void App::create_window(int width, int height, const char *title)
     if (!window)
     {
         glfwTerminate();
+        std::cerr << "Error while creating error" << std::endl;
         std::exit(-1);
     }
 }
@@ -28,9 +29,11 @@ void App::game_loop()
         glClear(GL_COLOR_BUFFER_BIT);
 
         glBegin(GL_TRIANGLES);
+
         glVertex2f(-0.5f, -0.5f);
         glVertex2f(0.0f, 0.5f);
         glVertex2f(0.5f, -0.5f);
+
         glEnd();
 
         /* Swap front and back buffers */
