@@ -25,5 +25,5 @@ set_target_properties(main PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_S
 # linking libs
 target_link_libraries(main app)
 target_link_libraries(main glfw)
-target_link_libraries(main glfw OpenGL::GL)
+target_link_libraries(main OpenGL::GL)
 target_link_libraries(main ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEW.a)
