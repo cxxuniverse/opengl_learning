@@ -18,6 +18,17 @@ void App::create_window(int width, int height, const char *title)
         std::cerr << "Error while creating error" << std::endl;
         std::exit(-1);
     }
+
+    glfwMakeContextCurrent(window);
+}
+
+void App::glew_init()
+{
+    if (glewInit() != GLEW_OK)
+    {
+        std::cerr << "Error while initializing GLEW" << std::endl;
+        std::exit(-1);
+    }
 }
 
 /* Loop until the user closes the window */

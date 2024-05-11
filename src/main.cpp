@@ -6,8 +6,6 @@ int main(void)
 
     app.create_window(640, 480, "Hello World");
 
-    glfwMakeContextCurrent(app.window);
-
     if (glewInit() != GLEW_OK)
     {
         std::cerr << "Error while initializing GLEW" << std::endl;

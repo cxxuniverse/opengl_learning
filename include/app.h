@@ -13,5 +13,7 @@ struct App
 
     void create_window(int width, int height, const char *title);
 
+    void glew_init();
+
     void game_loop();
 };
