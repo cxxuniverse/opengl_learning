@@ -14,6 +14,8 @@ int main(void)
         std::exit(-1);
     }
 
+    std::cout << glGetString(GL_VERSION) << std::endl;
+
     app.game_loop();
 
     glfwTerminate();
