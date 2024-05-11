@@ -8,8 +8,13 @@ int main(void)
 
     glfwMakeContextCurrent(app.window);
 
+    if (glewInit() != GLEW_OK)
+    {
+        std::cerr << "Error while initializing GLEW" << std::endl;
+        std::exit(-1);
+    }
+
     app.game_loop();
 
     glfwTerminate();
-    return 0;
 }
